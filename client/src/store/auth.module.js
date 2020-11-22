@@ -10,7 +10,19 @@ export const auth = {
     state: initialState,
     actions: {
         login({ commit }, user) {
-            return AuthService.login(user).then(
+            return AuthService.login(user, 'natural').then(
+                user => {
+                    commit('loginSuccess', user);
+                    return Promise.resolve(user);
+                },
+                error => {
+                    commit('loginFailure');
+                    return Promise.reject(error);
+                }
+            );
+        },
+        loginVk({commit}, user) {
+            return AuthService.login(user, 'vk').then(
                 user => {
                     commit('loginSuccess', user);
                     return Promise.resolve(user);

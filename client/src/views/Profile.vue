@@ -30,7 +30,7 @@
         computed: {
             currentUser() {
                 console.log('Profile', this.$store, this.$store.state, this.$store.state.auth);
-                return this.$store.state.auth.user;
+                return this.$store.state.auth.user.data;
             }
         },
         mounted() {

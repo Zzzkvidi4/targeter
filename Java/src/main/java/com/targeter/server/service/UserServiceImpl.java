@@ -8,7 +8,14 @@ import com.targeter.server.entity.User;
 import com.targeter.server.repository.UserRepository;
 import com.targeter.server.security.JwtUtils;
 import com.targeter.server.security.UserDetailsImpl;
+import com.vk.api.sdk.client.TransportClient;
+import com.vk.api.sdk.client.VkApiClient;
+import com.vk.api.sdk.exceptions.ApiException;
+import com.vk.api.sdk.exceptions.ClientException;
+import com.vk.api.sdk.httpclient.HttpTransportClient;
+import com.vk.api.sdk.objects.UserAuthResponse;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
@@ -22,6 +29,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
+@Slf4j
 @Service
 @Transactional
 @RequiredArgsConstructor
@@ -37,7 +45,24 @@ public class UserServiceImpl implements UserService {
 
   @Override
   public Data<UserDto> signIn(LoginRequest loginRequest) {
-    if (!userRepository.existsByUsername(loginRequest.getUsername())) {
+    if ("vk".equalsIgnoreCase(loginRequest.getMethod())) {
+      TransportClient transportClient = HttpTransportClient.getInstance();
+      VkApiClient vk = new VkApiClient(transportClient);
+      try {
+        UserAuthResponse authResponse = vk.oauth()
+            .userAuthorizationCodeFlow(7662595, "DvEaFLaiXWTYLPJYUTNa", "http://localhost:8081/login", loginRequest.getCode())
+            .execute();
+        if (!userRepository.existsByUsername(loginRequest.getUsername())) {
+          User user = new User();
+          user.setPassword(encoder.encode(authResponse.getUserId().toString()));
+          user.setUsername(authResponse.getUserId().toString());
+          userRepository.save(user);
+        }
+        return auth(authResponse.getUserId().toString(), authResponse.getUserId().toString());
+      } catch (ClientException | ApiException e) {
+        return Data.error(Collections.singletonList("Incorrect access token"));
+      }
+    } else if (!userRepository.existsByUsername(loginRequest.getUsername())) {
       return Data.error(Collections.singletonList("User with this username/password not exists!"));
     }
     return auth(loginRequest.getUsername(), loginRequest.getPassword());
@@ -48,11 +73,15 @@ public class UserServiceImpl implements UserService {
     if (userRepository.existsByUsername(signupRequest.getUsername())) {
       return Data.error(Collections.singletonList("User with this username already exists!"));
     }
-    User user = new User();
-    user.setPassword(encoder.encode(signupRequest.getPassword()));
-    user.setUsername(signupRequest.getUsername());
-    user = userRepository.save(user);
+    createUser(signupRequest.getUsername(), signupRequest.getPassword());
     return auth(signupRequest.getUsername(), signupRequest.getPassword());
+  }
+
+  private void createUser(String username, String password) {
+    User user = new User();
+    user.setPassword(encoder.encode(password));
+    user.setUsername(username);
+    userRepository.save(user);
   }
 
   private Data<UserDto> auth(String username, String password) {
