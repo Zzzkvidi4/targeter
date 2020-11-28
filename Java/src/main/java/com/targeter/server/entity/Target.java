@@ -2,33 +2,39 @@ package com.targeter.server.entity;
 
 import lombok.Getter;
 import lombok.Setter;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Getter
 @Setter
 @Entity
-@Table(name = "tbtarget")
+@Table(name = "target")
 public class Target {
   @Id
-  @Column(name = "target_id")
+  @Column(name = "id")
   @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private Long targetId;
+  private @NotNull Long id;
 
   @ManyToOne
   @JoinColumn(name = "user_id")
-  private User user;
+  private @NotNull User user;
 
-  @Column(name = "target_name")
-  private String name;
+  @Column(name = "text")
+  private @NotNull String text;
 
-  @Column(name = "target_description")
-  private String description;
+  @ManyToOne
+  @JoinColumn(name = "target_category_id")
+  private @NotNull TargetCategory category;
+
+  @Enumerated(EnumType.ORDINAL)
+  private @NotNull Status status;
+
+  @OneToOne
+  @JoinColumn(name = "schedule")
+  private @Nullable Schedule schedule;
+
+  @Column(name = "photo_report")
+  private @Nullable byte[] photoReport;
 }

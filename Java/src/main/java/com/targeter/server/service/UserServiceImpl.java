@@ -1,9 +1,9 @@
 package com.targeter.server.service;
 
 import com.targeter.server.dto.Data;
+import com.targeter.server.dto.LoginRequest;
 import com.targeter.server.dto.SignupRequest;
 import com.targeter.server.dto.UserDto;
-import com.targeter.server.dto.LoginRequest;
 import com.targeter.server.entity.User;
 import com.targeter.server.repository.UserRepository;
 import com.targeter.server.security.JwtUtils;
@@ -63,7 +63,7 @@ public class UserServiceImpl implements UserService {
         return Data.error(Collections.singletonList("Incorrect access token"));
       }
     } else if (!userRepository.existsByUsername(loginRequest.getUsername())) {
-      return Data.error(Collections.singletonList("User with this username/password not exists!"));
+      return Data.error(Collections.singletonList("User with this username/password does not exist!"));
     }
     return auth(loginRequest.getUsername(), loginRequest.getPassword());
   }
