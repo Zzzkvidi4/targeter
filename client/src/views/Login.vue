@@ -46,7 +46,7 @@
                 <div class="form-group">
                     <div v-if="message" class="alert alert-danger" role="alert">{{message}}</div>
                 </div>
-                <a href="https://oauth.vk.com/authorize?client_id=7662595&display=page&redirect_uri=http://localhost:8080/login&scope=friends&response_type=code&v=5.126">Vk auth</a>
+                <a href="https://oauth.vk.com/authorize?client_id=7662595&display=page&redirect_uri=http://34.71.172.95/login&scope=friends&response_type=code&v=5.126">Vk auth</a>
             </form>
         </div>
     </div>
