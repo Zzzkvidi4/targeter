@@ -46,16 +46,7 @@
                 <div class="form-group">
                     <div v-if="message" class="alert alert-danger" role="alert">{{message}}</div>
                 </div>
-                <a href="https://oauth.vk.com/authorize?client_id=7662595&display=page&redirect_uri=http://localhost:8081/login&scope=friends&response_type=code&v=5.126">Vk auth</a>
-                <!--<button @click="vkLogin">Login by VK</button>-->
-                <!--<button @click="vkLogout">vkLogout</button>-->
-                <!--<button @click="vkGetLoginStatus">vkGetLoginStatus</button>-->
-                <!--<button @click="vkRevokeGrants">vkRevokeGrants</button>-->
-                <!--<button @click="vkGetSession">vkGetSession</button>-->
-                <!--<button @click="vkApiMethodExample">vkApiMethodExample</button>-->
-                <!--&lt;!&ndash; VK Widget Example &ndash;&gt;-->
-                <!--<div id="vk_contact_us"></div>-->
-                <!--<div id="vk_auth"></div>-->
+                <a href="https://oauth.vk.com/authorize?client_id=7662595&display=page&redirect_uri=http://localhost:8080/login&scope=friends&response_type=code&v=5.126">Vk auth</a>
             </form>
         </div>
     </div>
@@ -95,16 +86,6 @@
                             this.loading = false;
                         }
                     );
-                /**this.$vkAuth.login()
-                    .then(response => {
-                        console.log('vklogin', response);
-
-
-                    })
-                    .catch(error => {
-                        this.loading = false;
-                        console.error(error)
-                    })*/
             }
         },
         methods: {
@@ -131,53 +112,6 @@
                         );
                     }
                 });
-            },
-            vkLogin() {
-            },
-            vkLogout() {
-                this.$vkAuth.logout()
-                    .then(response => {
-                        console.log('vklogout', response);
-                    })
-                    .catch(error => {
-                        console.error(error)
-                    })
-            },
-            vkGetLoginStatus() {
-                this.$vkAuth.getLoginStatus()
-                    .then(response => {
-                        console.log(response)
-                    })
-                    .catch(error => {
-                        console.error(error)
-                    })
-            },
-            vkRevokeGrants() {
-                this.$vkAuth.revokeGrants()
-                    .then(response => {
-                        console.log(response)
-                    })
-                    .catch(error => {
-                        console.error(error)
-                    })
-            },
-            vkGetSession() {
-                this.$vkAuth.getSession()
-                    .then(response => {
-                        console.log(response)
-                    })
-                    .catch(error => {
-                        console.error(error)
-                    })
-            },
-            vkApiMethodExample() {
-                this.$vkAuth.Api('users.get', {user_ids: ["137801839"], v: '5.73'})
-                    .then(response => {
-                        console.log(response)
-                    })
-                    .catch(error => {
-                        console.error(error)
-                    })
             }
         }
     };

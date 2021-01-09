@@ -14,7 +14,7 @@ public class Motivation {
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private @NotNull Long id;
+    private Long id;
 
     @Column(name = "text")
     private @NotNull String text;
