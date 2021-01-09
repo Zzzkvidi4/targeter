@@ -1,7 +1,7 @@
 FROM maven:3.5.2-jdk-8-alpine AS maven_tool_chain
-COPY pom.xml /project/server/
-COPY ../client /project/client/
-COPY src /project/server/src/
+COPY Java/pom.xml /project/server/
+COPY /client /project/client/
+COPY Java/src /project/server/src/
 WORKDIR /project/server/
 RUN mvn package -Pprod
 
