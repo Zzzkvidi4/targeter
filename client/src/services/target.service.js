@@ -1,7 +1,7 @@
 import axios from 'axios';
 import authHeader from "./auth-header";
 
-const API_URL = 'http://localhost:8080/api/targets';
+const API_URL = '/api/targets';
 
 class TargetService {
     createTarget(target) {
