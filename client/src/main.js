@@ -12,35 +12,18 @@ import {
     faUser,
     faUserPlus,
     faSignInAlt,
-    faSignOutAlt
+    faSignOutAlt,
+    faPlus
 } from '@fortawesome/free-solid-svg-icons';
-import VKAuth from '@dyadikov/vue-vk-oauth2';
+import vmodal from 'vue-js-modal';
 
-library.add(faHome, faUser, faUserPlus, faSignInAlt, faSignOutAlt);
+library.add(faHome, faUser, faUserPlus, faSignInAlt, faSignOutAlt, faPlus);
 
 Vue.config.productionTip = false;
 
 Vue.use(VeeValidate);
-Vue.use(VKAuth, {apiId: 7662595,
-    widgets: [{
-        widget: 'ContactUs',
-        selector: 'vk_contact_us',
-        props: {
-            text: 'Задайте свой вопрос'
-        }
-    },
-        {
-            widget: 'Auth',
-            selector: 'vk_auth',
-            props: {
-                text: 'Войти через VK',
-                display : 'popup',
-                response_type : 'code'
-            }
-        }]
-});
 Vue.component('font-awesome-icon', FontAwesomeIcon);
-
+Vue.use(vmodal, {dialog : true});
 new Vue({
     router,
     store,

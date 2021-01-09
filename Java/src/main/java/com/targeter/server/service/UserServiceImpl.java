@@ -16,6 +16,7 @@ import com.vk.api.sdk.httpclient.HttpTransportClient;
 import com.vk.api.sdk.objects.UserAuthResponse;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
@@ -43,6 +44,15 @@ public class UserServiceImpl implements UserService {
 
   private final JwtUtils jwtUtils;
 
+  @Value("targeter.app.vk.clientId")
+  private String vkAppId;
+
+  @Value("targeter.app.vk.clientSecret")
+  private String vkClientSecret;
+
+  @Value("targeter.app.vk.loginRedirectUrl")
+  private String vkLoginRedirectUrl;
+
   @Override
   public Data<UserDto> signIn(LoginRequest loginRequest) {
     if ("vk".equalsIgnoreCase(loginRequest.getMethod())) {
@@ -50,31 +60,31 @@ public class UserServiceImpl implements UserService {
       VkApiClient vk = new VkApiClient(transportClient);
       try {
         UserAuthResponse authResponse = vk.oauth()
-            .userAuthorizationCodeFlow(7662595, "DvEaFLaiXWTYLPJYUTNa", "http://localhost:8081/login", loginRequest.getCode())
+            .userAuthorizationCodeFlow(Integer.valueOf(vkAppId), vkClientSecret, vkLoginRedirectUrl, loginRequest.getCode())
             .execute();
-        if (!userRepository.existsByUsername(loginRequest.getUsername())) {
+        if (!userRepository.existsByUsername("vk:" + authResponse.getUserId().toString())) {
           User user = new User();
           user.setPassword(encoder.encode(authResponse.getUserId().toString()));
-          user.setUsername(authResponse.getUserId().toString());
+          user.setUsername("vk:" + authResponse.getUserId().toString());
           userRepository.save(user);
         }
-        return auth(authResponse.getUserId().toString(), authResponse.getUserId().toString());
+        return auth("vk:" + authResponse.getUserId().toString(), authResponse.getUserId().toString());
       } catch (ClientException | ApiException e) {
         return Data.error(Collections.singletonList("Incorrect access token"));
       }
-    } else if (!userRepository.existsByUsername(loginRequest.getUsername())) {
+    } else if (!userRepository.existsByUsername("internal:" + loginRequest.getUsername())) {
       return Data.error(Collections.singletonList("User with this username/password does not exist!"));
     }
-    return auth(loginRequest.getUsername(), loginRequest.getPassword());
+    return auth("internal:" + loginRequest.getUsername(), loginRequest.getPassword());
   }
 
   @Override
   public Data<UserDto> signUp(SignupRequest signupRequest) {
-    if (userRepository.existsByUsername(signupRequest.getUsername())) {
+    if (userRepository.existsByUsername("internal:" + signupRequest.getUsername())) {
       return Data.error(Collections.singletonList("User with this username already exists!"));
     }
-    createUser(signupRequest.getUsername(), signupRequest.getPassword());
-    return auth(signupRequest.getUsername(), signupRequest.getPassword());
+    createUser("internal:" + signupRequest.getUsername(), signupRequest.getPassword());
+    return auth("internal:" + signupRequest.getUsername(), signupRequest.getPassword());
   }
 
   private void createUser(String username, String password) {
