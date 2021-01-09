@@ -6,7 +6,7 @@ services:
       - "8080:8080"
     networks:
       targeterserverntw: {}
-    command: java -jar TargeterServer.jar
+    command: java -jar -Dspring.profiles.active=prod TargeterServer.jar
 networks:
   targeterserverntw:
     driver: bridge
