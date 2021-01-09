@@ -8,7 +8,7 @@ create table public.user (
 
 create table target_category (
 	id BIGSERIAL PRIMARY KEY,
-	user_id INTEGER REFERENCES public.user(id) ON DELETE CASCADE,
+	user_id BIGINT REFERENCES public.user(id) ON DELETE CASCADE,
 	name VARCHAR(15) NOT NULL
 );
 
@@ -27,16 +27,16 @@ CREATE TABLE public.schedule (
 
 create table target (
 	id BIGSERIAL PRIMARY KEY,
-	user_id INTEGER REFERENCES public.user(id) ON DELETE CASCADE NOT NULL,
+	user_id BIGINT REFERENCES public.user(id) ON DELETE CASCADE NOT NULL,
 	text varchar(250) NOT NULL,
-	target_category_id INTEGER REFERENCES target_category(id) NOT NULL,
+	target_category_id BIGINT REFERENCES target_category(id) NOT NULL,
 	status STATUS NOT NULL DEFAULT 'To Do',
-	schedule INTEGER REFERENCES schedule(id),
+	schedule BIGINT REFERENCES schedule(id),
 	photo_report BYTEA
 );
 
 create table motivation (
 	id BIGSERIAL PRIMARY KEY,
     text varchar(350) NOT NULL,
-	target_category_id INTEGER REFERENCES target_category(id)
+	target_category_id BIGINT REFERENCES target_category(id)
 );

@@ -33,14 +33,14 @@ public class Schedule {
     @Column(name = "interval")
     private @Nullable PGInterval interval;
 
-    @Type(type = "list-array")
+    /*@Type(type = "list-array")
     @Column(name = "week_days", columnDefinition = "week_day[]")
-    private @Nullable WeekDay[] weekDays;
+    private @Nullable WeekDay[] weekDays;*/
 
-    @Type(type = "list-array")
+    /*@Type(type = "list-array")
     @Column(
             name = "week_days_time",
             columnDefinition = "time[]"
     )
-    private LocalTime[] weekDaysTime;
+    private LocalTime[] weekDaysTime;*/
 }
