@@ -44,13 +44,13 @@ public class UserServiceImpl implements UserService {
 
   private final JwtUtils jwtUtils;
 
-  @Value("targeter.app.vk.clientId")
-  private String vkAppId;
+  @Value("${targeter.app.vk.clientId}")
+  private Integer vkAppId;
 
-  @Value("targeter.app.vk.clientSecret")
+  @Value("${targeter.app.vk.clientSecret}")
   private String vkClientSecret;
 
-  @Value("targeter.app.vk.loginRedirectUrl")
+  @Value("${targeter.app.vk.loginRedirectUrl}")
   private String vkLoginRedirectUrl;
 
   @Override
@@ -60,7 +60,7 @@ public class UserServiceImpl implements UserService {
       VkApiClient vk = new VkApiClient(transportClient);
       try {
         UserAuthResponse authResponse = vk.oauth()
-            .userAuthorizationCodeFlow(Integer.valueOf(vkAppId), vkClientSecret, vkLoginRedirectUrl, loginRequest.getCode())
+            .userAuthorizationCodeFlow(vkAppId, vkClientSecret, vkLoginRedirectUrl, loginRequest.getCode())
             .execute();
         if (!userRepository.existsByUsername("vk:" + authResponse.getUserId().toString())) {
           User user = new User();

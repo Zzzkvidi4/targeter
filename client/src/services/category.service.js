@@ -8,7 +8,7 @@ class CategoryService {
 
     getCategories() {
         const me = this;
-        return axios.get(API_URL + '/all')
+        return axios.get(API_URL + '/all', { headers: authHeader() })
             .then(response => {
                 me.categories = response.data.data;
                 return me.categories;
