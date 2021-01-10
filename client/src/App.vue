@@ -81,6 +81,9 @@
                 return false;
             }
         },
+        created() {
+          console.log('App is running in (' + process.env.NODE_ENV + ') mode');
+        },
         methods: {
             logOut() {
                 this.$store.dispatch('auth/logout');

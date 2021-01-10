@@ -10,7 +10,7 @@ services:
   targeter-dotnet:
     build: ./motivator
     ports:
-      - "9000:8080"
+      - "5000:80"
     networks:
       targeterserverntw: {}
 networks:

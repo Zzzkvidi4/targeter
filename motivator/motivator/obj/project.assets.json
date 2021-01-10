@@ -2393,19 +2393,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Lilia\\.nuget\\packages\\": {}
+    "C:\\Users\\Roman\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Studies\\6_year_(master)\\Облачные технологии\\targeter\\motivator\\motivator\\motivator.csproj",
+      "projectUniqueName": "D:\\Work\\CloudTech\\Targeter\\motivator\\motivator\\motivator.csproj",
       "projectName": "motivator",
-      "projectPath": "D:\\Studies\\6_year_(master)\\Облачные технологии\\targeter\\motivator\\motivator\\motivator.csproj",
-      "packagesPath": "C:\\Users\\Lilia\\.nuget\\packages\\",
-      "outputPath": "D:\\Studies\\6_year_(master)\\Облачные технологии\\targeter\\motivator\\motivator\\obj\\",
+      "projectPath": "D:\\Work\\CloudTech\\Targeter\\motivator\\motivator\\motivator.csproj",
+      "packagesPath": "C:\\Users\\Roman\\.nuget\\packages\\",
+      "outputPath": "D:\\Work\\CloudTech\\Targeter\\motivator\\motivator\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Lilia\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Roman\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2502,7 +2502,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Users\\Roman\\.dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }
