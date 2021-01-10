@@ -8,7 +8,6 @@ using Npgsql;
 using System;
 using System.Data.Common;
 using System.Data;
-using Polly;
 
 namespace motivator
 {
