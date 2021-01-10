@@ -26,8 +26,7 @@ namespace motivator
             services.AddControllers();
             //services.AddDbContext<TargeterDBContext>();
             services.AddSwaggerGen(c => { c.SwaggerDoc("v1", new OpenApiInfo {Title = "motivator", Version = "v1"}); });
-            services.AddScoped(typeof(DbConnection), (IServiceProvider) =>
-                InitializeDatabase());
+            //services.AddScoped(typeof(DbConnection), (IServiceProvider) => InitializeDatabase());
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -49,7 +48,7 @@ namespace motivator
             app.UseEndpoints(endpoints => { endpoints.MapControllers(); });
         }
 
-        DbConnection InitializeDatabase()
+        /*DbConnection InitializeDatabase()
         {
             DbConnection connection;
             connection = GetPostgreSqlConnection();
@@ -127,18 +126,18 @@ namespace motivator
                 {
                     // Return a new connection.
                     // [START_EXCLUDE]
-                    /*if (Environment.GetEnvironmentVariable("DB_HOST") != null)
+                    if (Environment.GetEnvironmentVariable("DB_HOST") != null)
                     {
                         return NewPostgreSqlTCPConnection();
                     }
                     else
-                    {*/
+                    {
                         return NewPostgreSqlUnixSocketConnection();
                     //}
                     // [END_EXCLUDE]
                 });
             // [END cloud_sql_postgres_dotnet_ado_backoff]
             return connection;
-        }
+        }*/
     }
 }
