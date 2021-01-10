@@ -67,7 +67,7 @@
                 redirectUrl : process.env.NODE_ENV === "development"
                     ? "https://oauth.vk.com/authorize?client_id=7662595&display=page&redirect_uri=http://localhost:8081/login&scope=friends&response_type=code&v=5.126"
                     : "https://oauth.vk.com/authorize?client_id=7662595&display=page&redirect_uri=http://localhost:8080/login&scope=friends&response_type=code&v=5.126"
-                    //: "https://oauth.vk.com/authorize?client_id=7662595&display=page&redirect_uri=http://34.71.172.95/login&scope=friends&response_type=code&v=5.126"
+                    //: "https://oauth.vk.com/authorize?client_id=7662595&display=page&redirect_uri=http://35.238.94.215/login&scope=friends&response_type=code&v=5.126"
             };
         },
         computed: {
