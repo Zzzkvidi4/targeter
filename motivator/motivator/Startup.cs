@@ -4,6 +4,11 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
+using Npgsql;
+using System;
+using System.Data.Common;
+using System.Data;
+using Polly;
 
 namespace motivator
 {
