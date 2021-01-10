@@ -7,6 +7,12 @@ services:
     networks:
       targeterserverntw: {}
     command: java -jar TargeterServer.jar
+  targeter-dotnet:
+    build: ./motivator
+    ports:
+      - "9000:8080"
+    networks:
+      targeterserverntw: {}
 networks:
   targeterserverntw:
     driver: bridge
