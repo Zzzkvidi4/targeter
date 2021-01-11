@@ -52,7 +52,7 @@ namespace motivator.Motivator
                 Init();
             }
             var target = _db.Targets.First(t => t.Id == targetId);
-            var schedule = _db.Schedules.First(s => s.Id == target.Id);
+            var schedule = _db.Schedules.First(s => s.Id == target.Schedule);
             await Run(schedule);
         }
 
@@ -73,7 +73,7 @@ namespace motivator.Motivator
                 //.WithSchedule(CronScheduleBuilder.CronSchedule("0/5 * * * * ?"))
                 //.WithCronSchedule(/*schedule.Cron*/"0/5 * * * * ?")
                 .WithSimpleSchedule(x => x
-                    .WithIntervalInSeconds(5)
+                    .WithIntervalInMinutes(1)
                     .RepeatForever()
                 )
                 .Build();

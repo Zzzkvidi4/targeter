@@ -1,6 +1,8 @@
 ﻿using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
+using motivator.Dtos;
 using motivator.Models;
 
 namespace motivator.Controllers
@@ -11,9 +13,12 @@ namespace motivator.Controllers
     {
         
         [HttpPost]
-        public void Update(long targetId)
+        public void Update([FromBody] TargetDto targetDto)
         {
-            Program.Motivator.Rerun(targetId);
+            if (targetDto?.targetId != null)
+            {
+                Program.Motivator.Rerun(targetDto.targetId.Value);
+            }
         }
     }
 }

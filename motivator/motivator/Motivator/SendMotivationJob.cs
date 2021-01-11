@@ -13,11 +13,6 @@ namespace motivator.Motivator
         private readonly Random _random = new Random();
         private readonly MsgSender _msgSender = new MsgSender();
 
-        public SendMotivationJob(TargeterContext db)
-        {
-            _db = db;
-        }
-
         public async Task Execute(IJobExecutionContext context)
         {
             var dataMap = context.JobDetail.JobDataMap;
@@ -30,7 +25,7 @@ namespace motivator.Motivator
 
         private string GenerateMsg(long targetCategoryId)
         {
-            var motivations = _db.Motivations.Where(m => m.TargetCategoryId == targetCategoryId).ToList();
+            var motivations = _db.Motivations.Where(m => m.TargetCategoryId == null || m.TargetCategoryId == targetCategoryId).ToList();
             var index = _random.Next(motivations.Count());
             return motivations.ElementAt(index).Text;
         }
