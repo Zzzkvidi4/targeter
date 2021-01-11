@@ -54,6 +54,11 @@
                 <div class="form-group">
                     <div v-if="message" class="alert alert-danger" role="alert">{{message}}</div>
                 </div>
+                <div>
+                    <p>Для получения мотивационных сообщений через ВК необходимо разрешить уведомления</p>
+                    <div id="vk_allow_messages_from_community"></div>
+                    <VueScriptComponent script='<script type="text/javascript">VK.Widgets.AllowMessagesFromCommunity("vk_allow_messages_from_community", {}, 201671833);</script>'/>
+                </div>
             </form>
         </div>
     </div>
@@ -66,10 +71,15 @@
     import CategoryService from '../services/category.service';
     import TargetService from '../services/target.service';
     import CategoryModal from "./CategoryModal.vue";
+    import VueScriptComponent from 'vue-script-component'
+
 
     export default {
         name: 'Target',
-        components: {CategoryModal},
+        components: {
+            CategoryModal,
+            VueScriptComponent
+        },
         data() {
             return {
                 message: '',

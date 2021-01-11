@@ -28,7 +28,6 @@ class AuthService {
     register(user) {
         return axios.post(API_URL + 'signup', {
             username: user.username,
-            email: user.email,
             password: user.password
         })
         .then(response => {
@@ -36,7 +35,7 @@ class AuthService {
                 localStorage.setItem('user', JSON.stringify(response.data.data));
             }
 
-            return response.data;
+            return response.data.data;
         });
     }
 }

@@ -9,7 +9,7 @@
             <form name="form" @submit.prevent="handleRegister">
                 <div v-if="!successful">
                     <div class="form-group">
-                        <label for="username">Username</label>
+                        <label for="username">Логин</label>
                         <input
                                 v-model="user.username"
                                 v-validate="'required|min:3|max:20'"
@@ -23,21 +23,7 @@
                         >{{errors.first('username')}}</div>
                     </div>
                     <div class="form-group">
-                        <label for="email">Email</label>
-                        <input
-                                v-model="user.email"
-                                v-validate="'required|email|max:50'"
-                                type="email"
-                                class="form-control"
-                                name="email"
-                        />
-                        <div
-                                v-if="submitted && errors.has('email')"
-                                class="alert-danger"
-                        >{{errors.first('email')}}</div>
-                    </div>
-                    <div class="form-group">
-                        <label for="password">Password</label>
+                        <label for="password">Пароль</label>
                         <input
                                 v-model="user.password"
                                 v-validate="'required|min:6|max:40'"
@@ -51,7 +37,7 @@
                         >{{errors.first('password')}}</div>
                     </div>
                     <div class="form-group">
-                        <button class="btn btn-primary btn-block">Sign Up</button>
+                        <button class="btn btn-primary btn-block">Зарегистрироваться</button>
                     </div>
                 </div>
             </form>
@@ -98,6 +84,7 @@
                             data => {
                                 this.message = data.message;
                                 this.successful = true;
+                                this.$router.push('/profile');
                             },
                             error => {
                                 this.message =
