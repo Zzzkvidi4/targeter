@@ -6,10 +6,11 @@ create table targeter_user (
 	surname VARCHAR(15)
 );
 
-create table target_category (
-	id BIGSERIAL PRIMARY KEY,
-	user_id BIGINT REFERENCES targeter_user(id) ON DELETE CASCADE,
-	name VARCHAR(15) NOT NULL
+create table target_category
+(
+    id      BIGSERIAL PRIMARY KEY,
+    user_id BIGINT REFERENCES targeter_user (id) ON DELETE CASCADE,
+    name    VARCHAR(150) NOT NULL
 );
 
 CREATE TYPE status AS ENUM ('ToDo', 'InProgress', 'Done');
@@ -17,12 +18,14 @@ CREATE TYPE status AS ENUM ('ToDo', 'InProgress', 'Done');
 CREATE TYPE week_day AS ENUM ('Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday');
 
 -- можно задать интервал(например, 3 дня) и/или дни недели с временем для каждого дня
-CREATE TABLE schedule (
-	id BIGSERIAL PRIMARY KEY,
-	begin_time TIMESTAMP NOT NULL DEFAULT current_timestamp,
-	interval INTERVAL,
-	week_days WEEK_DAY[],
-	week_days_time TIME[]
+CREATE TABLE schedule
+(
+    id             BIGSERIAL PRIMARY KEY,
+    begin_time     TIMESTAMP NOT NULL DEFAULT current_timestamp,
+    interval       INTERVAL,
+    week_days      WEEK_DAY[],
+    week_days_time TIME[],
+    cron           VARCHAR
 );
 
 create table target (

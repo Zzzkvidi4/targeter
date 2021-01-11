@@ -42,6 +42,10 @@
                     >Статус обязателен</div>
                 </div>
                 <div class="form-group">
+                  <label for="cron">Расписание (cron)</label>
+                  <input v-model="cron" class="form-control" name="cron">
+                </div>
+                <div class="form-group">
                     <button class="btn btn-primary btn-block" :disabled="loading">
                         <span v-show="loading" class="spinner-border spinner-border-sm"></span>
                         <span>Сохранить</span>
@@ -74,6 +78,7 @@
                 statuses: [],
                 selectedStatus: null,
                 selectedCategory : null,
+                cron : '',
                 categories : []
             };
         },
@@ -93,7 +98,8 @@
                     TargetService.createTarget({
                         text : me.text,
                         categoryId : me.selectedCategory,
-                        status : me.selectedStatus
+                        status : me.selectedStatus,
+                        cron : me.cron
                     }).then(() => {
                         this.loading = false;
                         this.$router.push('/targets');

@@ -34,12 +34,10 @@ namespace motivator.Models
 
             }
         }
-        
-        
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.HasPostgresEnum(null, "status", new[] { "To Do", "In Progress", "Done" })
+            modelBuilder.HasPostgresEnum(null, "status", new[] { "ToDo", "InProgress", "Done" })
                 .HasPostgresEnum(null, "week_day", new[] { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday" })
                 .HasAnnotation("Relational:Collation", "Russian_Russia.1251");
 
@@ -71,6 +69,10 @@ namespace motivator.Models
                 entity.Property(e => e.BeginTime)
                     .HasColumnName("begin_time")
                     .HasDefaultValueSql("CURRENT_TIMESTAMP");
+
+                entity.Property(e => e.Cron)
+                    .HasColumnType("character varying")
+                    .HasColumnName("cron");
 
                 entity.Property(e => e.Interval).HasColumnName("interval");
 
@@ -123,7 +125,7 @@ namespace motivator.Models
 
                 entity.Property(e => e.Name)
                     .IsRequired()
-                    .HasMaxLength(15)
+                    .HasMaxLength(150)
                     .HasColumnName("name");
 
                 entity.Property(e => e.UserId).HasColumnName("user_id");
@@ -139,15 +141,13 @@ namespace motivator.Models
             {
                 entity.ToTable("targeter_user");
 
-                entity.HasIndex(e => e.Password, "user_password_key")
+                entity.HasIndex(e => e.Password, "targeter_user_password_key")
                     .IsUnique();
 
-                entity.HasIndex(e => e.Username, "user_username_key")
+                entity.HasIndex(e => e.Username, "targeter_user_username_key")
                     .IsUnique();
 
-                entity.Property(e => e.Id)
-                    .HasColumnName("id")
-                    .HasDefaultValueSql("nextval('user_id_seq'::regclass)");
+                entity.Property(e => e.Id).HasColumnName("id");
 
                 entity.Property(e => e.Name)
                     .HasMaxLength(15)
@@ -155,7 +155,7 @@ namespace motivator.Models
 
                 entity.Property(e => e.Password)
                     .IsRequired()
-                    .HasMaxLength(30)
+                    .HasColumnType("character varying")
                     .HasColumnName("password");
 
                 entity.Property(e => e.Surname)
@@ -164,7 +164,7 @@ namespace motivator.Models
 
                 entity.Property(e => e.Username)
                     .IsRequired()
-                    .HasMaxLength(15)
+                    .HasMaxLength(100)
                     .HasColumnName("username");
             });
 

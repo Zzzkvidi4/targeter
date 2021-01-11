@@ -2,6 +2,7 @@ package com.targeter.server.dto;
 
 import lombok.Getter;
 import lombok.Setter;
+import org.jetbrains.annotations.Nullable;
 
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
@@ -23,4 +24,7 @@ public class TargetDto {
   @NotNull
   @NotEmpty
   private String status;
+
+  @Nullable
+  private String cron;
 }

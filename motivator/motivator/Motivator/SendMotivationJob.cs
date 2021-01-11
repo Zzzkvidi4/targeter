@@ -13,13 +13,19 @@ namespace motivator.Motivator
         private readonly Random _random = new Random();
         private readonly MsgSender _msgSender = new MsgSender();
 
+        public SendMotivationJob(TargeterContext db)
+        {
+            _db = db;
+        }
+
         public async Task Execute(IJobExecutionContext context)
         {
             var dataMap = context.JobDetail.JobDataMap;
             var vkUserId = dataMap.GetLongValue("vkUserId");
             var targetCategoryId = dataMap.GetLongValue("targetCategoryId");
 
-            await _msgSender.Send(GenerateMsg(targetCategoryId), vkUserId);
+            var generateMsg = GenerateMsg(targetCategoryId);
+            await _msgSender.Send(generateMsg, vkUserId);
         }
 
         private string GenerateMsg(long targetCategoryId)

@@ -8,17 +8,11 @@ import org.hibernate.annotations.Type;
 import org.hibernate.annotations.TypeDef;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import org.postgresql.util.PGInterval;
 
+import javax.persistence.*;
 import java.sql.Date;
 import java.sql.Timestamp;
 import java.util.List;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
 
 @Getter
 @Setter
@@ -37,17 +31,17 @@ public class Schedule {
     @Column(name = "begin_time", columnDefinition = "interval")
     private @NotNull Timestamp beginTime;
 
-    @Column(name = "interval")
-    private @Nullable PGInterval interval;
+    /*@Column(name = "interval")
+    private @Nullable PGInterval interval;*/
 
     @Type(
-        type = "com.vladmihalcea.hibernate.type.array.ListArrayType",
-        parameters = {
-            @Parameter(
-                name = ListArrayType.SQL_ARRAY_TYPE,
-                value = "week_day"
-            )
-        }
+            type = "com.vladmihalcea.hibernate.type.array.ListArrayType",
+            parameters = {
+                    @Parameter(
+                            name = ListArrayType.SQL_ARRAY_TYPE,
+                            value = "week_day"
+                    )
+            }
     )
     @Column(name = "week_days", columnDefinition = "week_day[]")
     private @Nullable List<WeekDay> weekDays;
@@ -58,4 +52,10 @@ public class Schedule {
             columnDefinition = "time[]"
     )
     private List<Date> weekDaysTime;
+
+    @Column(name = "cron")
+    private @Nullable String cron;
+
+    /*@OneToOne(mappedBy = "schedule")
+    private @NotNull Target target;*/
 }

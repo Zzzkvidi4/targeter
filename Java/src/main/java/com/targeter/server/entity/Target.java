@@ -31,19 +31,21 @@ public class Target {
   @Column(name = "text")
   private @NotNull String text;
 
-  @ManyToOne
-  @JoinColumn(name = "target_category_id")
-  private @NotNull TargetCategory category;
+    @ManyToOne
+    @JoinColumn(name = "target_category_id")
+    private @NotNull TargetCategory category;
 
-  @Enumerated(EnumType.STRING)
-  @Column(name = "status", columnDefinition = "status")
-  @Type(type = "pgsql_enum")
-  private @NotNull Status status;
+    @Enumerated(EnumType.STRING)
+    @Column(name = "status", columnDefinition = "status")
+    @Type(type = "pgsql_enum")
+    private @NotNull Status status;
 
-  @OneToOne
-  @JoinColumn(name = "schedule")
-  private @Nullable Schedule schedule;
+    /*@OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "schedule", referencedColumnName = "id")*/
+    @OneToOne
+    @JoinColumn(name = "schedule")
+    private @Nullable Schedule schedule;
 
-  @Column(name = "photo_report")
-  private @Nullable byte[] photoReport;
+    @Column(name = "photo_report")
+    private @Nullable byte[] photoReport;
 }

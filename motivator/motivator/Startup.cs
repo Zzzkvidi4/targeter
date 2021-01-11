@@ -8,6 +8,8 @@ using Npgsql;
 using System;
 using System.Data.Common;
 using System.Data;
+using motivator.Models;
+using motivator.Motivator;
 
 namespace motivator
 {
@@ -24,7 +26,8 @@ namespace motivator
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            //services.AddDbContext<TargeterDBContext>();
+            //services.AddDbContext<TargeterContext>();
+            //services.AddScoped<IMotivator, Motivator.Motivator>();
             services.AddSwaggerGen(c => { c.SwaggerDoc("v1", new OpenApiInfo {Title = "motivator", Version = "v1"}); });
         }
 

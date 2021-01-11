@@ -9,14 +9,11 @@ namespace motivator.Controllers
     [Route("[controller]")]
     public class UpdateScheduleController : ControllerBase
     {
-        TargeterContext db = new TargeterContext();
         
-        //TODO delete test get method, add post method to run new job or rerun existing
-        [HttpGet]
-        public IEnumerable<Motivation> Get()
+        [HttpPost]
+        public void Update(long targetId)
         {
-            return db.Motivations.ToList();
+            Program.Motivator.Rerun(targetId);
         }
-        
     }
 }

@@ -20,9 +20,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="42bd498e-693c-4fe7-9571-7a0b31a7c20f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/motivator/motivator/Models/Status.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/motivator/motivator/Models/WeekDay.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/motivator/motivator/Motivator/IMotivator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/targeter.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/targeter.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Java/src/main/resources/sql/V1__initial.sql" beforeDir="false" afterPath="$PROJECT_DIR$/Java/src/main/resources/sql/V1__initial.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/motivator/.idea/.idea.motivator/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/motivator/.idea/.idea.motivator/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/motivator/.idea/.idea.motivator/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/motivator/.idea/.idea.motivator/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/motivator/motivator/Controllers/UpdateScheduleController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/motivator/motivator/Controllers/UpdateScheduleController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/motivator/motivator/Models/Schedule.cs" beforeDir="false" afterPath="$PROJECT_DIR$/motivator/motivator/Models/Schedule.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/motivator/motivator/Models/Target.cs" beforeDir="false" afterPath="$PROJECT_DIR$/motivator/motivator/Models/Target.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/motivator/motivator/Models/TargeterContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/motivator/motivator/Models/TargeterContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/motivator/motivator/Motivator/Motivator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/motivator/motivator/Motivator/Motivator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/motivator/motivator/Motivator/SendMotivationJob.cs" beforeDir="false" afterPath="$PROJECT_DIR$/motivator/motivator/Motivator/SendMotivationJob.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/motivator/motivator/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/motivator/motivator/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/motivator/motivator/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/motivator/motivator/Startup.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/motivator/motivator/bin/Debug/net5.0/motivator.dll" beforeDir="false" afterPath="$PROJECT_DIR$/motivator/motivator/bin/Debug/net5.0/motivator.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/motivator/motivator/bin/Debug/net5.0/motivator.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/motivator/motivator/bin/Debug/net5.0/motivator.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/motivator/motivator/bin/Debug/net5.0/ref/motivator.dll" beforeDir="false" afterPath="$PROJECT_DIR$/motivator/motivator/bin/Debug/net5.0/ref/motivator.dll" afterDir="false" />
@@ -73,12 +86,26 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.general" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -111,6 +138,7 @@
       <workItem from="1606074583265" duration="252000" />
       <workItem from="1610033789003" duration="1514000" />
       <workItem from="1610200090336" duration="2822000" />
+      <workItem from="1610226136796" duration="1059000" />
     </task>
     <task id="LOCAL-00001" summary="Added .Net service for motivation mailing">
       <created>1610201282723</created>
@@ -141,20 +169,26 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added .Net service for motivation mailing" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added .Net service for motivation mailing" />
+    <MESSAGE value="Merge branch 'master' of https://github.com/Zzzkvidi4/targeter&#10;&#10; Conflicts:&#10;&#9;Java/src/main/java/com/targeter/server/entity/Schedule.java&#10;&#9;Java/src/main/resources/sql/V1__initial.sql" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'master' of https://github.com/Zzzkvidi4/targeter&#10;&#10; Conflicts:&#10;&#9;Java/src/main/java/com/targeter/server/entity/Schedule.java&#10;&#9;Java/src/main/resources/sql/V1__initial.sql" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="274" y="0" key="CommitChangelistDialog2" timestamp="1610201269389">
+    <state x="163" y="0" key="#Project_Structure" timestamp="1610227224475">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="274" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1610201269389" />
-    <state x="92" y="92" width="1182" height="544" key="DiffContextDialog" timestamp="1610200663365">
+    <state x="163" y="0" key="#Project_Structure/0.0.1366.728@0.0.1366.728" timestamp="1610227224475" />
+    <state x="274" y="0" key="CommitChangelistDialog2" timestamp="1610203411887">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="92" y="92" width="1182" height="544" key="DiffContextDialog/0.0.1366.728@0.0.1366.728" timestamp="1610200663365" />
+    <state x="274" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1610203411887" />
+    <state x="92" y="92" width="1182" height="544" key="DiffContextDialog" timestamp="1610203607050">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="92" y="92" width="1182" height="544" key="DiffContextDialog/0.0.1366.728@0.0.1366.728" timestamp="1610203607050" />
     <state x="-1" y="25" width="1351" height="703" key="MergeDialog" timestamp="1610201755094">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -163,5 +197,9 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="321" y="125" key="MultipleFileMergeDialog/0.0.1366.728@0.0.1366.728" timestamp="1610201755110" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1610203496558">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1610203496558" />
   </component>
 </project>

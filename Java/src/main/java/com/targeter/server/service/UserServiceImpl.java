@@ -36,13 +36,13 @@ import java.util.stream.Collectors;
 @RequiredArgsConstructor
 public class UserServiceImpl implements UserService {
 
-  private final AuthenticationManager authenticationManager;
+    private final AuthenticationManager authenticationManager;
 
   private final UserRepository userRepository;
 
-  private final PasswordEncoder encoder;
+    private final PasswordEncoder encoder;
 
-  private final JwtUtils jwtUtils;
+    private final JwtUtils jwtUtils;
 
   @Value("${targeter.app.vk.clientId}")
   private Integer vkAppId;
@@ -53,9 +53,9 @@ public class UserServiceImpl implements UserService {
   @Value("${targeter.app.vk.loginRedirectUrl}")
   private String vkLoginRedirectUrl;
 
-  @Override
-  public Data<UserDto> signIn(LoginRequest loginRequest) {
-    if ("vk".equalsIgnoreCase(loginRequest.getMethod())) {
+    @Override
+    public Data<UserDto> signIn(LoginRequest loginRequest) {
+        if ("vk".equalsIgnoreCase(loginRequest.getMethod())) {
       TransportClient transportClient = HttpTransportClient.getInstance();
       VkApiClient vk = new VkApiClient(transportClient);
       try {
