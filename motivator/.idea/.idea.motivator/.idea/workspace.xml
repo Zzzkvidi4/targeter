@@ -33,14 +33,27 @@
       <change beforePath="$PROJECT_DIR$/motivator/Models/TargeterContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/motivator/Models/TargeterContext.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/motivator/Motivator/Motivator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/motivator/Motivator/Motivator.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/motivator/Motivator/SendMotivationJob.cs" beforeDir="false" afterPath="$PROJECT_DIR$/motivator/Motivator/SendMotivationJob.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/motivator/bin/Debug/net5.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/motivator/bin/Debug/net5.0/Microsoft.AspNetCore.Authentication.OpenIdConnect.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/motivator/bin/Debug/net5.0/motivator.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/motivator/bin/Debug/net5.0/motivator.deps.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/motivator/bin/Debug/net5.0/motivator.dll" beforeDir="false" afterPath="$PROJECT_DIR$/motivator/bin/Debug/net5.0/motivator.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/motivator/bin/Debug/net5.0/motivator.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/motivator/bin/Debug/net5.0/motivator.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/motivator/bin/Debug/net5.0/motivator.runtimeconfig.dev.json" beforeDir="false" afterPath="$PROJECT_DIR$/motivator/bin/Debug/net5.0/motivator.runtimeconfig.dev.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/motivator/bin/Debug/net5.0/ref/motivator.dll" beforeDir="false" afterPath="$PROJECT_DIR$/motivator/bin/Debug/net5.0/ref/motivator.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/motivator/motivator.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/motivator/motivator.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/motivator/obj/Debug/net5.0/motivator.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/motivator/obj/Debug/net5.0/motivator.assets.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/motivator/obj/Debug/net5.0/motivator.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/motivator/obj/Debug/net5.0/motivator.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/motivator/obj/Debug/net5.0/motivator.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/motivator/obj/Debug/net5.0/motivator.csproj.FileListAbsolute.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/motivator/obj/Debug/net5.0/motivator.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/motivator/obj/Debug/net5.0/motivator.csprojAssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/motivator/obj/Debug/net5.0/motivator.dll" beforeDir="false" afterPath="$PROJECT_DIR$/motivator/obj/Debug/net5.0/motivator.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/motivator/obj/Debug/net5.0/motivator.genruntimeconfig.cache" beforeDir="false" afterPath="$PROJECT_DIR$/motivator/obj/Debug/net5.0/motivator.genruntimeconfig.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/motivator/obj/Debug/net5.0/motivator.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/motivator/obj/Debug/net5.0/motivator.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/motivator/obj/Debug/net5.0/ref/motivator.dll" beforeDir="false" afterPath="$PROJECT_DIR$/motivator/obj/Debug/net5.0/ref/motivator.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/motivator/obj/motivator.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/motivator/obj/motivator.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/motivator/obj/motivator.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/motivator/obj/motivator.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/motivator/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/motivator/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/motivator/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/motivator/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/motivator/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/motivator/obj/project.packagespec.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/motivator/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/motivator/obj/rider.project.restore.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -60,29 +73,24 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/C80B499D-ADA7-49E0-A8EE-7A9B1744160B/233/ExceptionDispatchInfo.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/motivator/Startup.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/D409F040-68AF-48C3-9B16-E35A0D8FF9C0/63/StdScheduler.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/D409F040-68AF-48C3-9B16-E35A0D8FF9C0/A7/QuartzScheduler.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/motivator/Controllers/UpdateScheduleController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/C80B499D-ADA7-49E0-A8EE-7A9B1744160B/2C5/AsyncVoidMethodBuilder.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/D2B0EF7B-A8C3-4AF1-95CC-501C0131D7BA/22D/EntityEntry.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/F9D19159-B4E7-4B8B-9ACD-35C4A14250E3/8/Queryable.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/C80B499D-ADA7-49E0-A8EE-7A9B1744160B/233/ExceptionDispatchInfo.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/motivator/Controllers/UpdateScheduleController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/D409F040-68AF-48C3-9B16-E35A0D8FF9C0/1B/TriggerBuilder.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/AA14B7C0-7B63-4D64-928B-8A5D71CA303C/23/92100bfa/ApiAuthParams.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/D409F040-68AF-48C3-9B16-E35A0D8FF9C0/D0/IScheduler.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/motivator/Startup.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/D409F040-68AF-48C3-9B16-E35A0D8FF9C0/8/JobBuilder.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/D2B0EF7B-A8C3-4AF1-95CC-501C0131D7BA/C/DbContext.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/588E3632-418C-426E-B5DF-4F46ADFF6033/b3/de410100/QueryableExtensions.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
-    <changedPaths>
-      <option value="$PROJECT_DIR$/motivator/Startup.cs" />
-      <option value="$PROJECT_DIR$/motivator/Motivator/SendMotivationJob.cs" />
-      <option value="$PROJECT_DIR$/motivator/Dtos/TargetDto.cs" />
-      <option value="$PROJECT_DIR$/motivator/Controllers/UpdateScheduleController.cs" />
-      <option value="$PROJECT_DIR$/motivator/Vk/MsgSender.cs" />
-      <option value="$PROJECT_DIR$/motivator/Motivator/Motivator.cs" />
-      <option value="$PROJECT_DIR$/motivator/Models/TargeterContext.cs" />
-    </changedPaths>
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/motivator/Motivator/Motivator.cs" />
+      </list>
+    </option>
   </component>
   <component name="ProjectId" id="1lZJA3d6XfZIvfSI008ORJU2R86" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -188,33 +196,95 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
+  <component name="WindowStateProjectService">
+    <state width="1323" height="225" key="GridCell.Tab.0.bottom" timestamp="1610360395025">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="225" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1610360395025" />
+    <state width="1323" height="225" key="GridCell.Tab.0.center" timestamp="1610360395025">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="225" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1610360395025" />
+    <state width="1323" height="225" key="GridCell.Tab.0.left" timestamp="1610360395025">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="225" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1610360395025" />
+    <state width="1323" height="225" key="GridCell.Tab.0.right" timestamp="1610360395025">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="225" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1610360395025" />
+    <state width="1323" height="313" key="GridCell.Tab.1.bottom" timestamp="1610359010387">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="313" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1610359010387" />
+    <state width="1323" height="313" key="GridCell.Tab.1.center" timestamp="1610359010325">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="313" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1610359010325" />
+    <state width="1323" height="313" key="GridCell.Tab.1.left" timestamp="1610359010325">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="313" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1610359010325" />
+    <state width="1323" height="313" key="GridCell.Tab.1.right" timestamp="1610359010325">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="313" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1610359010325" />
+    <state width="1323" height="313" key="GridCell.Tab.2.bottom" timestamp="1610359010387">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="313" key="GridCell.Tab.2.bottom/0.0.1366.728@0.0.1366.728" timestamp="1610359010387" />
+    <state width="1323" height="313" key="GridCell.Tab.2.center" timestamp="1610359010387">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="313" key="GridCell.Tab.2.center/0.0.1366.728@0.0.1366.728" timestamp="1610359010387" />
+    <state width="1323" height="313" key="GridCell.Tab.2.left" timestamp="1610359010387">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="313" key="GridCell.Tab.2.left/0.0.1366.728@0.0.1366.728" timestamp="1610359010387" />
+    <state width="1323" height="313" key="GridCell.Tab.2.right" timestamp="1610359010387">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="313" key="GridCell.Tab.2.right/0.0.1366.728@0.0.1366.728" timestamp="1610359010387" />
+    <state width="1323" height="313" key="GridCell.Tab.3.bottom" timestamp="1610359010387">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="313" key="GridCell.Tab.3.bottom/0.0.1366.728@0.0.1366.728" timestamp="1610359010387" />
+    <state width="1323" height="313" key="GridCell.Tab.3.center" timestamp="1610359010387">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="313" key="GridCell.Tab.3.center/0.0.1366.728@0.0.1366.728" timestamp="1610359010387" />
+    <state width="1323" height="313" key="GridCell.Tab.3.left" timestamp="1610359010387">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="313" key="GridCell.Tab.3.left/0.0.1366.728@0.0.1366.728" timestamp="1610359010387" />
+    <state width="1323" height="313" key="GridCell.Tab.3.right" timestamp="1610359010387">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="313" key="GridCell.Tab.3.right/0.0.1366.728@0.0.1366.728" timestamp="1610359010387" />
+    <state width="1323" height="313" key="GridCell.Tab.4.bottom" timestamp="1610359010387">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="313" key="GridCell.Tab.4.bottom/0.0.1366.728@0.0.1366.728" timestamp="1610359010387" />
+    <state width="1323" height="313" key="GridCell.Tab.4.center" timestamp="1610359010387">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="313" key="GridCell.Tab.4.center/0.0.1366.728@0.0.1366.728" timestamp="1610359010387" />
+    <state width="1323" height="313" key="GridCell.Tab.4.left" timestamp="1610359010387">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="313" key="GridCell.Tab.4.left/0.0.1366.728@0.0.1366.728" timestamp="1610359010387" />
+    <state width="1323" height="313" key="GridCell.Tab.4.right" timestamp="1610359010387">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="313" key="GridCell.Tab.4.right/0.0.1366.728@0.0.1366.728" timestamp="1610359010387" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/motivator/Motivator/Motivator.cs</url>
-          <line>49</line>
-          <properties documentPath="D:\Work\CloudTech\Targeter\motivator\motivator\Motivator\Motivator.cs" initialLine="49" containingFunctionPresentation="method 'Rerun'">
-            <startOffsets>
-              <option value="1422" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1445" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/motivator/Controllers/UpdateScheduleController.cs</url>
           <line>17</line>
-          <properties documentPath="D:\Work\CloudTech\Targeter\motivator\motivator\Controllers\UpdateScheduleController.cs" initialLine="17" containingFunctionPresentation="method 'Update'">
-            <startOffsets>
-              <option value="405" />
-            </startOffsets>
-            <endOffsets>
-              <option value="437" />
-            </endOffsets>
-          </properties>
+          <properties documentPath="D:\Work\CloudTech\Targeter\motivator\motivator\Controllers\UpdateScheduleController.cs" initialLine="17" />
           <option name="timeStamp" value="17" />
         </line-breakpoint>
       </breakpoints>

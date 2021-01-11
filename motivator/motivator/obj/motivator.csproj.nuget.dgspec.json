@@ -1,32 +1,31 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Work\\CloudTech\\Targeter\\motivator\\motivator\\motivator.csproj": {}
+    "D:\\Studies\\6_year_(master)\\Облачные технологии\\targeter\\motivator\\motivator\\motivator.csproj": {}
   },
   "projects": {
-    "D:\\Work\\CloudTech\\Targeter\\motivator\\motivator\\motivator.csproj": {
+    "D:\\Studies\\6_year_(master)\\Облачные технологии\\targeter\\motivator\\motivator\\motivator.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Work\\CloudTech\\Targeter\\motivator\\motivator\\motivator.csproj",
+        "projectUniqueName": "D:\\Studies\\6_year_(master)\\Облачные технологии\\targeter\\motivator\\motivator\\motivator.csproj",
         "projectName": "motivator",
-        "projectPath": "D:\\Work\\CloudTech\\Targeter\\motivator\\motivator\\motivator.csproj",
-        "packagesPath": "C:\\Users\\Roman\\.nuget\\packages\\",
-        "outputPath": "D:\\Work\\CloudTech\\Targeter\\motivator\\motivator\\obj\\",
+        "projectPath": "D:\\Studies\\6_year_(master)\\Облачные технологии\\targeter\\motivator\\motivator\\motivator.csproj",
+        "packagesPath": "C:\\Users\\Lilia\\.nuget\\packages\\",
+        "outputPath": "D:\\Studies\\6_year_(master)\\Облачные технологии\\targeter\\motivator\\motivator\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Roman\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Lilia\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net5.0"
+          "net50"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net5.0": {
-            "targetAlias": "net5.0",
+          "netcoreapp5.0": {
             "projectReferences": {}
           }
         },
@@ -37,8 +36,7 @@
         }
       },
       "frameworks": {
-        "net5.0": {
-          "targetAlias": "net5.0",
+        "netcoreapp5.0": {
           "dependencies": {
             "EntityFramework6.Npgsql": {
               "target": "Package",
@@ -59,6 +57,10 @@
               ]
             },
             "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.Analyzers": {
               "target": "Package",
               "version": "[5.0.1, )"
             },
@@ -111,7 +113,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Users\\Roman\\.dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -68,14 +68,8 @@ namespace motivator.Motivator
 
             var trigger = TriggerBuilder.Create()
                 .WithIdentity("trigger" + target.Id, "send_motivation")
-                //.StartAt(schedule.BeginTime)
-                .StartNow()
-                //.WithSchedule(CronScheduleBuilder.CronSchedule("0/5 * * * * ?"))
-                //.WithCronSchedule(/*schedule.Cron*/"0/5 * * * * ?")
-                .WithSimpleSchedule(x => x
-                    .WithIntervalInMinutes(1)
-                    .RepeatForever()
-                )
+                .StartAt(schedule.BeginTime)
+                .WithCronSchedule(schedule.Cron) //example "0/20 * * * * ?"
                 .Build();
             var job = JobBuilder.Create<SendMotivationJob>()
                 .WithIdentity("job" + target.Id, "send_motivation")

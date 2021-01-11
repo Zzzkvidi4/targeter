@@ -7,8 +7,6 @@ D:\Studies\6_year_(master)\Облачные технологии\targeter\motiva
 D:\Studies\6_year_(master)\Облачные технологии\targeter\motivator\motivator\bin\Debug\net5.0\motivator.dll
 D:\Studies\6_year_(master)\Облачные технологии\targeter\motivator\motivator\bin\Debug\net5.0\ref\motivator.dll
 D:\Studies\6_year_(master)\Облачные технологии\targeter\motivator\motivator\bin\Debug\net5.0\motivator.pdb
-D:\Studies\6_year_(master)\Облачные технологии\targeter\motivator\motivator\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
-D:\Studies\6_year_(master)\Облачные технологии\targeter\motivator\motivator\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.OpenIdConnect.dll
 D:\Studies\6_year_(master)\Облачные технологии\targeter\motivator\motivator\bin\Debug\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
 D:\Studies\6_year_(master)\Облачные технологии\targeter\motivator\motivator\bin\Debug\net5.0\Microsoft.IdentityModel.Logging.dll
 D:\Studies\6_year_(master)\Облачные технологии\targeter\motivator\motivator\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.dll

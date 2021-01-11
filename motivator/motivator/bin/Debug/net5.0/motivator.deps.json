@@ -25,17 +25,6 @@
     ".NETCoreApp,Version=v5.0": {
       "motivator/1.0.0": {
         "dependencies": {
-          "EntityFramework6.Npgsql": "6.4.1",
-          "Microsoft.AspNetCore.Authentication.JwtBearer": "5.0.1",
-          "Microsoft.AspNetCore.Authentication.OpenIdConnect": "5.0.1",
-          "Microsoft.EntityFrameworkCore": "5.0.1",
-          "Microsoft.EntityFrameworkCore.Tools": "5.0.1",
-          "Microsoft.Extensions.DependencyInjection": "5.0.1",
-          "Microsoft.Extensions.Logging.Abstractions": "5.0.0",
-          "Npgsql.EntityFrameworkCore.PostgreSQL": "5.0.1",
-          "Quartz": "3.2.3",
-          "Swashbuckle.AspNetCore": "5.6.3",
-          "VkNet": "1.58.0",
           "Microsoft.AspNetCore.Antiforgery": "5.0.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions": "5.0.0.0",
           "Microsoft.AspNetCore.Authentication.Cookies": "5.0.0.0",
@@ -386,29 +375,11 @@
       "Microsoft.AspNetCore.Authentication.JwtBearer/5.0.1": {
         "dependencies": {
           "Microsoft.IdentityModel.Protocols.OpenIdConnect": "6.7.1"
-        },
-        "runtime": {
-          "lib/net5.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll": {
-            "assemblyVersion": "5.0.1.0",
-            "fileVersion": "5.0.120.60107"
-          }
-        },
-        "compile": {
-          "lib/net5.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll": {}
         }
       },
       "Microsoft.AspNetCore.Authentication.OpenIdConnect/5.0.1": {
         "dependencies": {
           "Microsoft.IdentityModel.Protocols.OpenIdConnect": "6.7.1"
-        },
-        "runtime": {
-          "lib/net5.0/Microsoft.AspNetCore.Authentication.OpenIdConnect.dll": {
-            "assemblyVersion": "5.0.1.0",
-            "fileVersion": "5.0.120.60107"
-          }
-        },
-        "compile": {
-          "lib/net5.0/Microsoft.AspNetCore.Authentication.OpenIdConnect.dll": {}
         }
       },
       "Microsoft.CSharp/4.7.0": {},
@@ -503,13 +474,13 @@
           "Microsoft.Extensions.DependencyInjection.Abstractions": "5.0.0"
         },
         "runtime": {
-          "lib/net5.0/Microsoft.Extensions.DependencyInjection.dll": {
+          "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.dll": {
             "assemblyVersion": "5.0.0.1",
             "fileVersion": "5.0.120.57516"
           }
         },
         "compile": {
-          "lib/net5.0/Microsoft.Extensions.DependencyInjection.dll": {}
+          "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.dll": {}
         }
       },
       "Microsoft.Extensions.DependencyInjection.Abstractions/5.0.0": {},
@@ -639,13 +610,13 @@
           "System.Runtime.CompilerServices.Unsafe": "4.6.0"
         },
         "runtime": {
-          "lib/net5.0/Npgsql.dll": {
+          "lib/netcoreapp3.1/Npgsql.dll": {
             "assemblyVersion": "5.0.1.1",
             "fileVersion": "5.0.1.1"
           }
         },
         "compile": {
-          "lib/net5.0/Npgsql.dll": {}
+          "lib/netcoreapp3.1/Npgsql.dll": {}
         }
       },
       "Npgsql.EntityFrameworkCore.PostgreSQL/5.0.1": {
@@ -773,16 +744,8 @@
           "ref/netstandard2.0/System.CodeDom.dll": {}
         }
       },
-      "System.Collections.Immutable/5.0.0": {
-        "compile": {
-          "lib/netstandard2.0/System.Collections.Immutable.dll": {}
-        }
-      },
-      "System.ComponentModel.Annotations/5.0.0": {
-        "compile": {
-          "ref/netstandard2.1/System.ComponentModel.Annotations.dll": {}
-        }
-      },
+      "System.Collections.Immutable/5.0.0": {},
+      "System.ComponentModel.Annotations/5.0.0": {},
       "System.Configuration.ConfigurationManager/4.7.0": {
         "dependencies": {
           "System.Security.Cryptography.ProtectedData": "4.7.0",
@@ -828,11 +791,7 @@
           "ref/netcoreapp2.1/System.Data.SqlClient.dll": {}
         }
       },
-      "System.Diagnostics.DiagnosticSource/5.0.0": {
-        "compile": {
-          "lib/net5.0/System.Diagnostics.DiagnosticSource.dll": {}
-        }
-      },
+      "System.Diagnostics.DiagnosticSource/5.0.0": {},
       "System.Drawing.Common/4.7.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "3.1.0",
@@ -898,13 +857,13 @@
           "Newtonsoft.Json": "12.0.3"
         },
         "runtime": {
-          "lib/net5.0/VkNet.dll": {
+          "lib/netstandard2.0/VkNet.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
         },
         "compile": {
-          "lib/net5.0/VkNet.dll": {}
+          "lib/netstandard2.0/VkNet.dll": {}
         }
       },
       "Microsoft.AspNetCore.Antiforgery/5.0.0.0": {
